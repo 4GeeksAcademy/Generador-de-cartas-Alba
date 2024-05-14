@@ -10,18 +10,21 @@ window.onload = function() {
   console.log("ejecutar");
   //write your code here
 
-  let arr = ["♦", "♥", "♠", "♣"];
-  let nums = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
-  let numsRandom = Math.floor(Math.random() * nums.length);
-  let arrRandom = Math.floor(Math.random() * arr.length);
+  let pintsOfPoker = ["♦", "♥", "♠", "♣"];
+  let valor = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
+  let valorRandom = Math.floor(Math.random() * valor.length);
+  let pintsOfPokerRandom = Math.floor(Math.random() * pintsOfPoker.length);
 
-  if (arr[arrRandom] == "♦" || arr[arrRandom] == "♥") {
+  if (
+    pintsOfPoker[pintsOfPokerRandom] == "♦" ||
+    pintsOfPoker[pintsOfPokerRandom] == "♥"
+  ) {
     document.querySelector("#card").classList.add("red");
   }
-  let top = document.querySelector("#top-suit");
-  let number = document.querySelector("#number");
-  let bottom = document.querySelector("#bottom-suit");
-  top.innerHTML = arr[arrRandom];
-  number.innerHTML = nums[numsRandom];
-  bottom.innerHTML = top.innerHTML;
+  let topCard = document.querySelector("#top-suit");
+  let numberValor = document.querySelector("#number");
+  let bottomCard = document.querySelector("#bottom-suit");
+  topCard.innerHTML = pintsOfPoker[pintsOfPokerRandom];
+  numberValor.innerHTML = valor[valorRandom];
+  bottomCard.innerHTML = topCard.innerHTML;
 };
